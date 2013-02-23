@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>class-transition demo</title>
+    <link rel="stylesheet" href="build/build.css" />
+    <style>
+      .highlight {
+        -webkit-transition: 2s background linear;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>class-transition demo</h1>
+    <p id="p">This is a paragraph that shall be highlighted</p>
+    <button id="b">Highlight!</button>
+
+    <script src="build/build.js"></script>
+    <script>
+      var transition = require('class-transition');
+      var but = document.getElementById('b');
+      var par = document.getElementById('p');
+      but.onclick = function(){
+        console.log('added');
+        transition(par, 'highlight');
+      }
+    </script>
+  </body>
+</html>
