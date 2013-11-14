@@ -2,4 +2,4 @@
 0.0.1 / 2013-02-23
 ==================
 
-  * *: initial component
+  * initial component
