@@ -1,6 +1,6 @@
 {
   "name": "class-transition",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "ms": "0.5.1",
     "classes-component": "1.1.4",

@@ -1,6 +1,6 @@
 {
   "name": "class-transition",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repo": "component/class-transition",
   "dependencies": {
     "guille/ms.js": "0.5.1",
