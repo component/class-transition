@@ -2,9 +2,9 @@
   "name": "class-transition",
   "version": "0.0.1",
   "dependencies": {
-    "ms": "0.5.0",
-    "classes-component": "1.1.0",
-    "css-emitter": "*"
+    "ms": "0.5.1",
+    "classes-component": "1.1.4",
+    "css-emitter": "0.0.1"
   },
   "component": {
     "scripts": {
