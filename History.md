@@ -1,4 +1,9 @@
 
+0.0.3 / 2013-11-15
+==================
+
+  * package: use GH syntax for classes-component for now
+
 0.0.2 / 2013-11-14
 ==================
 
