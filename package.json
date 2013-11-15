@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "dependencies": {
     "ms": "0.5.1",
-    "classes-component": "1.1.4",
+    "classes-component": "component/classes#1.1.4",
     "css-emitter": "0.0.1"
   },
   "component": {
