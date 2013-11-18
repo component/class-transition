@@ -1,11 +1,12 @@
 {
   "name": "class-transition",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "repo": "component/class-transition",
   "dependencies": {
     "guille/ms.js": "0.5.1",
     "component/classes": "1.1.4",
-    "ecarter/css-emitter": "0.0.1"
+    "component/transitionend-property": "0.0.2",
+    "component/event": "0.1.1"
   },
   "scripts": [
     "index.js"
