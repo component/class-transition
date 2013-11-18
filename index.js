@@ -5,7 +5,8 @@
 
 var ms = require('ms');
 var classes = require('classes');
-var cssEvent = require('css-emitter');
+var event = require('event');
+var prop = require('transitionend-property');
 
 /**
  * Module exports.
@@ -36,12 +37,12 @@ function transition(el, css, dur){
   }
 
   // remove class upon transition
-  var emitter = cssEvent(el);
-  emitter.once('end', cleanup);
+  event.bind(el, prop, cleanup);
 
   // cleanup function
   function cleanup(){
     cls.remove(css);
     clearTimeout(timer);
+    event.unbind(el, prop, cleanup)
   }
 }
