@@ -3,9 +3,13 @@
   "version": "0.0.4",
   "dependencies": {
     "ms": "0.7.0",
-    "classes-component": "component/classes#1.1.4",
-    "transitionend-property": "0.0.2",
-    "event-component": "component/event#0.1.1"
+    "component-classes": "1.2.3",
+    "component-event": "0.1.4",
+    "transitionend-property": "0.0.2"
+  },
+  "browser": {
+    "classes": "component-classes",
+    "event": "component-event"
   },
   "component": {
     "scripts": {
