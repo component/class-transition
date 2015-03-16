@@ -2,7 +2,7 @@
 0.0.4 / 2013-11-18
 ==================
 
- * remove css-emitter dep
+  * remove css-emitter dep
 
 0.0.3 / 2013-11-15
 ==================
