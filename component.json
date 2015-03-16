@@ -4,9 +4,9 @@
   "repo": "component/class-transition",
   "dependencies": {
     "guille/ms.js": "0.7.0",
-    "component/classes": "1.1.4",
-    "component/transitionend-property": "0.0.2",
-    "component/event": "0.1.1"
+    "component/classes": "1.2.3",
+    "component/event": "0.1.4",
+    "component/transitionend-property": "0.0.2"
   },
   "scripts": [
     "index.js"
