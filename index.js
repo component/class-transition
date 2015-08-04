@@ -7,6 +7,7 @@ var ms = require('ms');
 var classes = require('classes');
 var event = require('event');
 var prop = require('transitionend-property');
+var noop = function() {};
 
 /**
  * Module exports.
@@ -24,15 +25,20 @@ module.exports = transition;
  * @api public
  */
 
-function transition(el, css, dur){
+function transition(el, css, dur, fn){
+  fn = fn || noop;
+
   var cls = classes(el);
   var timer;
 
   // add class
   cls.add(css);
 
-  // set a timer fallback
-  if (null != dur) {
+  if ('function' == typeof dur) {
+    // callback function
+    fn = dur;
+  } else if (null != dur) {
+    // set a timer fallback
     timer = setTimeout(cleanup, ms(dur));
   }
 
@@ -42,6 +48,7 @@ function transition(el, css, dur){
   // cleanup function
   function cleanup(){
     cls.remove(css);
+    fn(el, css);
     clearTimeout(timer);
     event.unbind(el, prop, cleanup)
   }

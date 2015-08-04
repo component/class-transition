@@ -2,11 +2,15 @@
 <html>
   <head>
     <title>class-transition demo</title>
-    <link rel="stylesheet" href="build/build.css" />
     <style>
       .highlight {
         -webkit-transition: 2s background linear;
         background: yellow;
+      }
+
+      .fade-out {
+        -webkit-transition: 2s opacity linear;
+        opacity: 0;
       }
     </style>
   </head>
@@ -14,6 +18,9 @@
     <h1>class-transition demo</h1>
     <p id="p">This is a paragraph that shall be highlighted</p>
     <button id="b">Highlight!</button>
+
+    <p id="p2">This is a paragraph that shall fade away and disappear</p>
+    <button id="b2">Fade Away and disappear!</button>
 
     <script src="build/build.js"></script>
     <script>
@@ -24,6 +31,16 @@
         console.log('added');
         transition(par, 'highlight');
       }
+
+      var but2 = document.getElementById('b2');
+      var par2 = document.getElementById('p2');
+      but2.onclick = function() {
+        transition(par2, 'fade-out', function(el) {
+          // remove me
+          el.parentNode.removeChild(el);
+        });
+      }
+
     </script>
   </body>
 </html>
