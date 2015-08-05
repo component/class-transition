@@ -9,18 +9,24 @@ transition completing or a timeout executing as a fallback.
 ```js
 var transition = require('class-transition');
 var el = document.getElementById('subject');
-transition(el, 'highlight', '500ms');
+transition(el, 'highlight', '500ms', function() {
+  console.log('transition finished');
+});
 ```
 
 ## API
 
-### transition(class, time)
+### transition(el, class, [time], [fn])
 
-Applies the given `class`. `time` is passed to the
+Applies the given `class` to `el` for a given `time`.
+If no `time` is given, the class will be removed when
+the transition completes.
+
+`time` is passed to the
 [ms](http://github.com/guille/ms) component, so it can be `500` or `'500ms'` or `'0.5s'`.
 
-**Note:** if only support for browsers with CSS transitions is needed,
-the `time` parameter can be omitted.
+You may also pass an optional `fn` to be notified
+when the transition finishes.
 
 ## License
 
