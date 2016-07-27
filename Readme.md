@@ -28,6 +28,10 @@ the transition completes.
 You may also pass an optional `fn` to be notified
 when the transition finishes.
 
+## Test
+
+Run `nsp check --output summary` to check for CVEs if you are changing the package dependencies.
+
 ## License
 
 MIT
